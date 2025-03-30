@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Settings - Driver Drowsiness Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-car text-blue-600 text-2xl"></i>
+                <h1 class="text-xl font-bold">Drowsiness Detection</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-blue-600"><i class="fas fa-home mr-1"></i>Dashboard</a></li>
+                    <li><a href="#" class="hover:text-blue-600"><i class="fas fa-history mr-1"></i>Alert History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6 border-b">
+                <h2 class="text-2xl font-bold">System Settings</h2>
+                <p class="text-gray-600">Configure your drowsiness detection preferences</p>
+            </div>
+
+            <div class="p-6 space-y-6">
+                <!-- Sensitivity Setting -->
+                <div>
+                    <label class="block text-lg font-medium mb-2">Detection Sensitivity</label>
+                    <input type="range" min="1" max="10" value="5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-sm text-gray-500 mt-1">
+                        <span>Low</span>
+                        <span>Medium</span>
+                        <span>High</span>
+                    </div>
+                </div>
+
+                <!-- Alert Settings -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Alert Preferences</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" checked class="form-checkbox h-5 w-5 text-blue-600">
+                            <span>Enable Audio Alerts</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" checked class="form-checkbox h-5 w-5 text-blue-600">
+                            <span>Enable Visual Alerts</span>
+                        </label>
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span>Enable Vibration Alerts</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">Notification Settings</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center space-x-3">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+                            <span>Send alerts to emergency contact</span>
+                        </label>
+                        <div class="pl-8">
+                            <label class="block text-sm font-medium mb-1">Emergency Contact Number</label>
+                            <input type="tel" placeholder="+1 (___) ___-____" class="w-full px-3 py-2 border rounded-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Settings -->
+                <div>
+                    <h3 class="text-lg font-medium mb-3">System Configuration</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Camera Source</label>
+                            <select class="w-full px-3 py-2 border rounded-md">
+                                <option>Front Camera</option>
+                                <option>Rear Camera</option>
+                                <option>External Camera</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-1">Data Retention</label>
+                            <select class="w-full px-3 py-2 border rounded-md">
+                                <option>7 days</option>
+                                <option>30 days</option>
+                                <option>90 days</option>
+                                <option>Indefinitely</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="pt-4 flex justify-end space-x-3">
+                    <button class="px-4 py-2 border rounded-md hover:bg-gray-50">Cancel</button>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-8 py-4">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>© 2023 Drowsiness Detection System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
